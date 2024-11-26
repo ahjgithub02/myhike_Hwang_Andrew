@@ -35,7 +35,7 @@
     <!-- Other libraries and styles of your own -->
     <!-------------------------------------------->
     <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
-    <link rel="stylesheet" href="./styles/style.css">
+    <!-- <link rel="stylesheet" href="./styles/style.css"> -->
 
 </head>
 
@@ -47,24 +47,29 @@
     <!-- our own navbar goes here -->
     <nav id="navbarPlaceholder"></nav>
 
-    <div class="px-4 pt-5 my-5 text-center border-bottom">
-        <div class="overflow-hidden" style="max-height: 30vh;">
-            <div class="container px-5">
-                <h1 class="display-4 fw-bold">Hikers R' Us</h1>
-                <img src="images/hike3.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image"
-                    width="200" height="200" loading="lazy">
+    <!-- the body of your page goes here -->
+    <!-- stuff -->
+    <div class="container">
+        <h1>Saved Hikes for <span id=name-goes-here></span></h1>
+        <!-- Here is container for cards  -->
+        <div class="container">
+            <div id="hikeCardGroup" class="row row-cols-auto">
             </div>
         </div>
-        <div class="col-lg-6 mx-auto">
-            <h2>An application that helps hikers all across Canada.</h1>
-            <p class="lead mb-4">This hiking app was inspired by my friends from Set B.
-                Thank you guys for being awesome!
-            </p>
-            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-                <a href="login.html" class="btn btn-primary btn-lg px-4 me-sm-3" role="button">Log in / Sign Up</a>
+    </div>
+
+    <!-- Templates for general use, not displayed -->
+    <template id="savedCardTemplate">
+        <div class="card py-2 mx-2 bg-light" style="width: 10rem;">
+            <img class="card-image card-img-top" src=" ..." alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-length">placeholder</p>
+                <br>
+                <a class="btn btn-secondary card-href" id="read-more">Read more ...</a>
             </div>
         </div>
-</div>
+    </template>
 
     <!-- our own footer goes here-->
     <nav id="footerPlaceholder"></nav>
@@ -74,10 +79,8 @@
     <!---------------------------------------------->
     <script src="./scripts/firebaseAPI_TEAM99.js"></script>
     <script src="./scripts/skeleton.js"></script>
-    <script src="./scripts/script.js"></script>
-    <script>
-        logout();       //make sure user is logged out
-    </script>
+    <script src="./scripts/saved.js"></script>
+    <!-- <script src="./scripts/script.js"></script> -->
 
 </body>
 
